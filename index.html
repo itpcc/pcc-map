@@ -1,11 +1,10 @@
-
 <html>    
   <head> 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>        
+    <script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>        
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
-    <script type="text/javascript" src="/assets/js/gmap3.min.js"></script> 
-    <link rel="stylesheet" type="text/css" href="/assets/css/embed_fonts.css" />
+    <script type="text/javascript" src="assets/js/gmap3.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="assets/embed_fonts.css" />
     <style>
        body{
         text-align:center;
@@ -62,7 +61,7 @@
         padding: 0;
         border: 1px dashed #C0C0C0;
         width: 395px;
-        height: 380px;
+        height: 480px;
         float: left;
       }
       #tool{
@@ -73,7 +72,7 @@
       #data{
         position: relative;
         width: 400px;
-        height: 380px;
+        height: 480px;
       }
       #backtomain{
         position: absolute;
@@ -150,19 +149,20 @@
               console.log(marker.position);
             }} //นครศรีธรรมราช 
     ];
+    var currDir = document.URL.substr(0,document.URL.lastIndexOf('/'))+'/';
     var markersIcon = [
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pcccr.png",
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pccpl.png",
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pccl.png",
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pcclb.png",
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pcccb.png",
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pccpb.png",
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pccst.png",
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pcctrg.png",
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pccbr.png",
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pccmh.png",
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pccpt.png",
-      "http://www.pccnst.ac.th/PCCNST_custom/pcc-map/assets/img/pccnst.png"
+      currDir+"assets/img/pcccr.png",
+      currDir+"assets/img/pccpl.png",
+      currDir+"assets/img/pccl.png",
+      currDir+"assets/img/pcclb.png",
+      currDir+"assets/img/pcccb.png",
+      currDir+"assets/img/pccpb.png",
+      currDir+"assets/img/pccst.png",
+      currDir+"assets/img/pcctrg.png",
+      currDir+"assets/img/pccbr.png",
+      currDir+"assets/img/pccmh.png",
+      currDir+"assets/img/pccpt.png",
+      currDir+"assets/img/pccnst.png"
     ];
     var mapCenter = [13.727896,100.524123];
     var mapCenterObj = new google.maps.LatLng(mapCenter[0], mapCenter[1]);
